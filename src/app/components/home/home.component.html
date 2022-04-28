@@ -1,0 +1,53 @@
+<div class="container" style="height: 100vh">
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col"><h3>ID</h3></th>
+          <th scope="col"><h3>NAME</h3></th>
+          <th scope="col"><h3>TITLE</h3></th>
+          <th scope="col"><h3>IMAGE</h3></th>
+          <th scope="col"><h3>#</h3></th>
+          <th scope="col"><h3>#</h3></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dt of data; index as i">
+          <td>{{ dt.id }}</td>
+          <td>{{ dt.name }}</td>
+          <td>{{ dt.title }}</td>
+          <td>
+            <img
+              src="{{ dt.url }}"
+              width="auto"
+              height="120px"
+              style="text-align: center; border-radius: 50%"
+            />
+          </td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              style="margin-left: 30px"
+              (click)="EditUser(dt.id)"
+            >
+              Edit
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-outline-danger"
+              style="margin-left: 10px"
+              (click)="DeleteUser(i)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <br />
+</div>

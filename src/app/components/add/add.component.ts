@@ -11,9 +11,12 @@ export class AddComponent implements OnInit {
   userDetails: any = {};
   constructor(private _eh: EventHandlerService,     private _router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
   addUser() {
     this._eh.userDetails.push(this.userDetails);
     this._router.navigate(['home']);
+    
   }
 }

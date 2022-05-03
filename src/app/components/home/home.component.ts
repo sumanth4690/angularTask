@@ -28,8 +28,8 @@ DeleteUser(i: any){
     this.data.splice(i,1);
   }
 }
-EditUser(id:any){
-  this._router.navigate(['/home',id])
+EditUser(idx:any){
+  this._router.navigate(['/home',idx])
 }
 }
 

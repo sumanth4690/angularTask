@@ -9,7 +9,7 @@ import { EventHandlerService } from 'src/app/event-handler.service';
 })
 export class AddComponent implements OnInit {
   userDetails: any = {};
-  constructor(private _eh: EventHandlerService,     private _router: Router) {}
+  constructor(private _eh: EventHandlerService,private _router: Router) {}
 
   ngOnInit(): void {
 

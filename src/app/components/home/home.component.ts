@@ -13,8 +13,7 @@ import { EventHandlerService } from 'src/app/event-handler.service';
 })
 export class HomeComponent implements OnInit {
   data: any=[];
-  dt:any=[];
-
+  
   constructor(private _http:HttpClient,private _eh:EventHandlerService, private _router:Router) { }
  
   ngOnInit(): void {
@@ -27,9 +26,10 @@ DeleteUser(i: any){
   if(confirm('Do you want to delete this user?')){
     this.data.splice(i,1);
   }
+  this._router.navigate(['/home'])
 }
-EditUser(idx:any){
-  this._router.navigate(['/home',idx])
+EditUser(id:any){
+  this._router.navigate(['/home',id])
 }
 }
 

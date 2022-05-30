@@ -2,18 +2,18 @@
   <div class="container">
     <table class="table table-striped">
       <thead>
-        <tr>
-          <th scope="col"><h3>ID</h3></th>
-          <th scope="col"><h3>NAME</h3></th>
-          <th scope="col"><h3>TITLE</h3></th>
-          <th scope="col"><h3>IMAGE</h3></th>
-          <th scope="col"><h3>#</h3></th>
-          <th scope="col"><h3>#</h3></th>
+        <tr class="text-center align-middle">
+          <th scope="col"><h2>ID</h2></th>
+          <th scope="col"><h2>NAME</h2></th>
+          <th scope="col"><h2>TITLE</h2></th>
+          <th scope="col"><h2>IMAGE</h2></th>
+          <th scope="col"><h2>#</h2></th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let dt of data; index as i">
+        <tr *ngFor="let dt of data; index as i" class="text-center align-middle"  (click)="EditUser(dt.id)" style="cursor: pointer;">
           <td>{{ dt.id }}</td>
+          
           <td>{{ dt.name }}</td>
           <td>{{ dt.title }}</td>
           <td>
@@ -24,16 +24,16 @@
               style="text-align: center; border-radius: 50%"
             />
           </td>
-          <td>
+          <!-- <td>
             <button
               type="button"
               class="btn btn-outline-primary"
               style="margin-left: 30px"
-              (click)="EditUser(dt.id)"
+              [routerLink]="['/home', dt.id]"
             >
-              Edit
+              EDIT 
             </button>
-          </td>
+          </td> -->
           <td>
             <button
               type="button"

@@ -11,7 +11,7 @@ import { EventHandlerService } from './event-handler.service';
 })
 export class AppComponent {
   title = 'angularTask';
-  public data: any=[];
+  public  : any=[];
   // public msg: any;
   // parent2: any;
   // parent3: any;
